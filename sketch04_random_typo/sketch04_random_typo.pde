@@ -1,5 +1,5 @@
 // Aleatoriedad en tipografía
-String palabra = "Aleatorio";
+String palabra = "Aleatoriedad";
 PFont futuraLight, futuraLightItalic, futuraRegular, futuraRegularItalic, futuraMedium, futuraMediumItalic, futuraBold, futuraBoldItalic;
 PFont[] FONT_FUTURA;
 
@@ -8,9 +8,9 @@ int framesSaved = 0;
 
 
 void setup() {
- 
-  textSize(10);
+
   frameRate(4);
+
   
   futuraLight = createFont("data/fonts/FUTURA45LIGHT.TTF",32);
   futuraLightItalic = createFont("data/fonts/FUTURA46LIGHTITALIC.TTF",32);
@@ -23,10 +23,7 @@ void setup() {
   
   FONT_FUTURA = new PFont[]{futuraLight, futuraLightItalic, futuraRegular, futuraRegularItalic, futuraMedium, futuraMediumItalic, futuraBold, futuraBoldItalic};
   
-     if (framesSaved < framesToSave) {
-    saveFrame("frames/dice-####.png");
-    framesSaved++;
-  }
+
 }
 
 void draw() {
@@ -44,6 +41,10 @@ void draw() {
     textSize(tamaño);
     PFont fuenteAleatoria = FONT_FUTURA[int(random(FONT_FUTURA.length))];
     textFont(fuenteAleatoria);
+  }
+    if (framesSaved < framesToSave) {
+    saveFrame("frames/random-####.png");
+    framesSaved++;
   }
 }
 

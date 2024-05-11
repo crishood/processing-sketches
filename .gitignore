@@ -4,3 +4,4 @@
 *.gif
 *.bmp
 *.svg
+.DS_Store
