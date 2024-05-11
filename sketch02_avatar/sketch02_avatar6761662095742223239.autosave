@@ -1,0 +1,13 @@
+PImage img;
+
+void setup() {
+  size(1080, 1080);
+  background(255);
+  img = loadImage("mago.jpg");
+  img.resize(width, height);
+  image(img, 0, 0);
+}
+
+void draw() {
+  copy(img, (int)random(60, 1080), (int)random(60, 1080), width/16, height/16, (int)random(60, 1080), (int)random(60, 1080, 7, 7));
+}
